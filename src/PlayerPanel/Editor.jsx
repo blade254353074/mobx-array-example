@@ -16,6 +16,7 @@ class Editor extends React.Component {
       <div className='player-editor'>
         <div className='player-editor-content'>
           <p>index: {focus}</p>
+          <p>id: {player.id}</p>
           <input value={name} onChange={e => (player.name = e.target.value)} />
         </div>
         <input value={introduce} onChange={e => (player.introduce = e.target.value)} />

@@ -21,6 +21,12 @@ class PanelState {
     return newPlayer
   }
 
+  @action onFocus = index => {
+    this.dataSource[index]
+      ? this.focus = index
+      : this.focus = this.dataSource.length - 1
+  }
+
   @action clear = _ => {
     this.dataSource.clear()
   }

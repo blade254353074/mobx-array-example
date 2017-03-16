@@ -2872,6 +2872,10 @@ shelljs@^0.6.0:
   version "0.6.1"
   resolved "http://registry.npm.taobao.org/shelljs/download/shelljs-0.6.1.tgz#ec6211bed1920442088fe0f70b2837232ed2c8a8"
 
+shortid@^2.2.8:
+  version "2.2.8"
+  resolved "http://registry.npm.taobao.org/shortid/download/shortid-2.2.8.tgz#033b117d6a2e975804f6f0969dbe7d3d0b355131"
+
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "http://registry.npm.taobao.org/signal-exit/download/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
