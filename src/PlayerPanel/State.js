@@ -10,13 +10,8 @@ class PanelState {
     this.focus = 0
   }
 
-  @computed get list () {
-    return this.dataSource.peek()
-  }
-
   @computed get player () {
-    const index = this.focus
-    return this.dataSource[index]
+    return this.dataSource[this.focus]
   }
 
   @action createPlayer = _ => {

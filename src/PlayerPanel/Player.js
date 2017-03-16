@@ -1,10 +1,10 @@
 import { observable } from 'mobx'
 
 class Player {
-  id;
-  store;
-  @observable name;
-  @observable introduce;
+  id
+  store
+  @observable name
+  @observable introduce
 
   constructor (store, { name = 'Untitled', introduce = '' } = {}) {
     this.id = +new Date()
@@ -15,7 +15,6 @@ class Player {
   }
 
   reset = _ => {
-    this.id = +new Date()
     this.name = 'Untitled'
     this.introduce = ''
   }
@@ -25,9 +24,7 @@ class Player {
     const isLastOne = dataSource.length === 1
 
     if (isLastOne) return dataSource[0].reset()
-    console.log(this.store.focus)
-    this.store.focus = this.store.focus - 1
-    console.log(this.store.focus)
+    this.store.focus--
     dataSource.remove(this)
   }
 }

@@ -9,20 +9,25 @@ class List extends React.Component {
     this.store = props.panelStore
   }
 
-  render () {
-    const { list, createPlayer } = this.store
+  onDelete (event, destory) {
+    event.stopPropagation()
+    destory()
+  }
 
-    const players = list.map(({ id, name, introduce, destory }, index) => {
-      console.log(list, index)
+  render () {
+    const { dataSource, focus, createPlayer } = this.store
+
+    const players = dataSource.map(({ id, name, introduce, destory }, index) => {
+      const focusClass = focus === index ? ' focus' : ''
       return (
         <li
-          className='item'
+          className={`item${focusClass}`}
           key={id}
           onClick={_ => (this.store.focus = index)}
         >
           <p className='single-line'>{name}</p>
           <p className='single-line'>{introduce}</p>
-          <button onClick={destory}>Delete</button>
+          <button onClick={event => this.onDelete(event, destory)}>Delete</button>
         </li>
       )
     })
