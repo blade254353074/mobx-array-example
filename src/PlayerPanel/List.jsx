@@ -23,7 +23,7 @@ class List extends React.Component {
         <li
           className={`item${focusClass}`}
           key={id}
-          onClick={_ => (this.store.focus = index)}
+          onClick={_ => this.store.onFocus(index)}
         >
           <p className='single-line'>{name}</p>
           <p className='single-line'>{introduce}</p>
