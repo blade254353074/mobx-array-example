@@ -19,9 +19,9 @@ class Player {
     const { dataSource } = this.store
     const isLastOne = dataSource.length === 1
 
+    if (isLastOne) this.store.createPlayer()
     this.store.focus--
     dataSource.remove(this)
-    if (isLastOne) return this.store.createPlayer()
   }
 }
 
